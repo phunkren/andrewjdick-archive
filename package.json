@@ -172,9 +172,12 @@
       "compression",
       "cross-env",
       "express",
+      "fs",
       "ip",
       "minimist",
-      "sanitize.css"
+      "net",
+      "sanitize.css",
+      "tls"
     ],
     "include": [
       "core-js",
