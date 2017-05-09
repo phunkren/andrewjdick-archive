@@ -174,8 +174,7 @@
       "express",
       "ip",
       "minimist",
-      "sanitize.css",
-      "twit"
+      "sanitize.css"
     ],
     "include": [
       "core-js",
@@ -242,9 +241,7 @@
     "styled-components": "^1.4.6",
     "twitter": "^1.7.0",
     "warning": "3.0.0",
-    "whatwg-fetch": "2.0.1"
-  },
-  "devDependencies": {
+    "whatwg-fetch": "2.0.1",
     "babel-cli": "6.18.0",
     "babel-core": "6.21.0",
     "babel-eslint": "7.1.1",
