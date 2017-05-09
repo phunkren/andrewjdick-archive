@@ -14,8 +14,7 @@ const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
-app.get('/twitter', function(req, res) {
-
+app.get('/twitter', (req, res) => {
   const params = {
     screen_name: 'andrewjd_ck',
     exclude_replies: true,
@@ -27,15 +26,15 @@ app.get('/twitter', function(req, res) {
     consumer_key: '70SWl1dVTwxqKgOjcU2WtZQnF',
     consumer_secret: 'a16id08Aypthqifq2E5WdDpZuqjFvJzK8fDRzo9MzcktnKzl0U',
     access_token_key: '1100704825-Vj3XlpcL54aNAg9yFM5aB1qxLiVaxNqDgyhHHWV',
-    access_token_secret: 'AkuGcMdYbMEYj7e930n6qXpFbb3sOMo1zbePmtD1433uJ'
+    access_token_secret: 'AkuGcMdYbMEYj7e930n6qXpFbb3sOMo1zbePmtD1433uJ',
   });
 
-  var bar = [];
-
   // Retrieves a list of all of my tweets
-  const foo = client.get('statuses/user_timeline', params, function(error, tweets, response) {
+  client.get('statuses/user_timeline', params, (error, tweets, response) => {
     if (!error) {
       res.send(tweets);
+    } else {
+      console.error(response);
     }
   });
 });

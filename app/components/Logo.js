@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 
 /* Style Components */
 const Wrapper = styled.div`
@@ -24,28 +23,23 @@ const Subtitle = styled.p`
 /* Component Logic */
 export default class Logo extends React.PureComponent {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      latestTweet: ''
-    };
-  }
-
-  componentDidMount() {
-    axios.get(`/twitter`).then(res => {
-      const latestTweet = res.data[0].text;
-      this.setState({latestTweet: latestTweet});
-    });
-  }
-
   render() {
+    if (!this.props.title || !this.props.title) {
+      return null;
+    }
 
-    return(
+    return (
       <Wrapper>
         <Title>{this.props.title}</Title>
         <Subtitle>{this.props.subtitle}</Subtitle>
       </Wrapper>
-    )
+    );
   }
 }
+
+
+/* Validation */
+Logo.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  subtitle: React.PropTypes.string.isRequired,
+};

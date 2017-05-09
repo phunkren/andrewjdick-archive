@@ -20,21 +20,20 @@ export default class Tweet extends React.PureComponent {
     super(props);
 
     this.state = {
-      latestTweet: ''
+      latestTweet: '',
     };
   }
 
   componentDidMount() {
-    axios.get(`/twitter`).then(res => {
+    axios.get('/twitter').then((res) => {
       const latestTweet = res.data[0].text;
-      this.setState({latestTweet: latestTweet});
+      this.setState({ latestTweet });
     });
   }
 
   render() {
-
-    return(
+    return (
       <LatestTweet>{this.state.latestTweet}</LatestTweet>
-    )
+    );
   }
 }
