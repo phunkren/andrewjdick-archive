@@ -13,6 +13,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Particles from 'react-particles-js';
+import Logo from '../../components/Logo.js';
 import Tweet from '../../components/Tweet.js'
 import styled from 'styled-components';
 
@@ -20,6 +21,10 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   render() {
     return (
       <div>
+        <Logo title="andrewjdick" subtitle="coming soon..." />
+
+        <Tweet />
+
         <Particles height="100vh" width="100vw" params={{
           "particles": {
             "number": {
@@ -94,7 +99,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             "events": {
               "onhover": {
                 "enable": true,
-                "mode": "grab"
+                "mode": "bubble"
               },
               "onclick": {
                 "enable": true,
@@ -130,17 +135,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           },
           "retina_detect": true
         }}/>
-
-        <div className='title__wrapper'>
-          <h1>andrewjdick</h1>
-          <p> coming soon...</p>
-        </div>
-
-        <Tweet />
-
       </div>
-
-
     );
   }
 }

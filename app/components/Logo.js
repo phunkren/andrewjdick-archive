@@ -3,18 +3,26 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 /* Style Components */
-const LatestTweet = styled.p`
-  bottom: 0;
+const Wrapper = styled.div`
   left: 50%;
-  margin-bottom: 20px;
   position: absolute;
-  text-align: center;
-  transform: translateX(-50%);
-  width: 66%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
+const Title = styled.h1`
+  font-size: 60px;
+  font-weight: 500;
+  margin: 0;
+`;
+
+const Subtitle = styled.p`
+  text-align: center;
+`;
+
+
 /* Component Logic */
-export default class Tweet extends React.PureComponent {
+export default class Logo extends React.PureComponent {
 
   constructor(props) {
     super(props);
@@ -34,7 +42,10 @@ export default class Tweet extends React.PureComponent {
   render() {
 
     return(
-      <LatestTweet>{this.state.latestTweet}</LatestTweet>
+      <Wrapper>
+        <Title>{this.props.title}</Title>
+        <Subtitle>{this.props.subtitle}</Subtitle>
+      </Wrapper>
     )
   }
 }
