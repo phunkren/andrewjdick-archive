@@ -18,6 +18,10 @@ const TweetLink = styled.a`
   text-decoration: underline;
   font-weight: 500;
   padding-left: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const TweetHandle = styled.p`

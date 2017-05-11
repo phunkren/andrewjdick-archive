@@ -20,13 +20,6 @@ const Employment = styled.div`
   text-align: center;
 `;
 
-const Position = styled.p`
-  display: inline-block;
-`;
-
-const Company = styled.a`
-`;
-
 /* Component Logic */
 export default class Logo extends React.PureComponent {
 
@@ -37,9 +30,9 @@ export default class Logo extends React.PureComponent {
 
     return (
       <Wrapper>
-        <Name>{this.props.title}</Name>
+        <Name><a href={this.props.personalLink} target="_blank"> {this.props.title}</a></Name>
         <Employment>
-          <Position>{this.props.position}</Position> <span>@</span> <Company href={this.props.companyLink} target="_blank">{this.props.company}</Company>
+          <a href={this.props.positionLink} target="_blank">{this.props.position}</a> <span>@</span> <a href={this.props.companyLink} target="_blank">{this.props.company}</a>
         </Employment>
       </Wrapper>
     );
@@ -53,4 +46,6 @@ Logo.propTypes = {
   position: React.PropTypes.string.isRequired,
   company: React.PropTypes.string.isRequired,
   companyLink: React.PropTypes.string.isRequired,
+  positionLink: React.PropTypes.string.isRequired,
+  personalLink: React.PropTypes.string.isRequired,
 };
