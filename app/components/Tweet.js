@@ -11,6 +11,7 @@ const LatestTweet = styled.section`
   text-align: center;
   transform: translateX(-50%);
   width: 66%;
+  z-index: 10;
 `;
 
 const TweetLink = styled.a`
@@ -61,7 +62,7 @@ export default class Tweet extends React.PureComponent {
     return (
       <LatestTweet>
         <a href={`https://twitter.com/${this.state.tweet.handle}/status/${this.state.tweet.id}`} target="_blank">
-          {`"${this.state.tweet.text}"`}`
+          {`"${this.state.tweet.text}"`}
         </a>
 
         {this.state.tweet.url !== '' &&
