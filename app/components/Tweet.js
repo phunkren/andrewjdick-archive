@@ -14,14 +14,16 @@ const LatestTweet = styled.section`
   z-index: 10;
 `;
 
+const TweetText = styled.a`
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const TweetLink = styled.a`
   text-decoration: underline;
   font-weight: 500;
   padding-left: 10px;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const TweetHandle = styled.p`
@@ -65,9 +67,9 @@ export default class Tweet extends React.PureComponent {
   render() {
     return (
       <LatestTweet>
-        <a href={`https://twitter.com/${this.state.tweet.handle}/status/${this.state.tweet.id}`} target="_blank">
+        <TweetText href={`https://twitter.com/${this.state.tweet.handle}/status/${this.state.tweet.id}`} target="_blank">
           {`"${this.state.tweet.text}"`}
-        </a>
+        </TweetText>
 
         {this.state.tweet.url !== '' &&
           <TweetLink href={`https://t.co/${this.state.tweet.url}`} target="_blank">
