@@ -44,9 +44,5 @@ injectGlobal`
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
-
-    &:hover {
-      font-weight: 600;
-    }
   }
 `;
