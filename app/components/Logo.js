@@ -9,16 +9,22 @@ const Wrapper = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const Title = styled.h1`
+const Name = styled.h1`
   font-size: 60px;
   font-weight: 500;
   margin: 0;
 `;
 
-const Subtitle = styled.p`
+const Employment = styled.div`
   text-align: center;
 `;
 
+const Position = styled.p`
+  display: inline-block;
+`;
+
+const Company = styled.a`
+`;
 
 /* Component Logic */
 export default class Logo extends React.PureComponent {
@@ -30,8 +36,10 @@ export default class Logo extends React.PureComponent {
 
     return (
       <Wrapper>
-        <Title>{this.props.title}</Title>
-        <Subtitle>{this.props.subtitle}</Subtitle>
+        <Name>{this.props.title}</Name>
+        <Employment>
+          <Position>{this.props.position}</Position> <span>@</span> <Company href={this.props.companyLink} target="_blank">{this.props.company}</Company>
+        </Employment>
       </Wrapper>
     );
   }
@@ -41,5 +49,7 @@ export default class Logo extends React.PureComponent {
 /* Validation */
 Logo.propTypes = {
   title: React.PropTypes.string.isRequired,
-  subtitle: React.PropTypes.string.isRequired,
+  position: React.PropTypes.string.isRequired,
+  company: React.PropTypes.string.isRequired,
+  companyLink: React.PropTypes.string.isRequired,
 };

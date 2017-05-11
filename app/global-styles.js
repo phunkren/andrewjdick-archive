@@ -34,8 +34,19 @@ injectGlobal`
   }
 
   canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
