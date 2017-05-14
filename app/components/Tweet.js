@@ -12,6 +12,10 @@ const LatestTweet = styled.section`
   transform: translateX(-50%);
   width: 66%;
   z-index: 10;
+
+  @media only screen and (min-width: 481px!default;) {
+    width: 90%;
+  }
 `;
 
 const TweetText = styled.a`

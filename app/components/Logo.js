@@ -11,9 +11,13 @@ const Wrapper = styled.div`
 `;
 
 const Name = styled.h1`
-  font-size: 72px;
+  font-size: 36px;
   font-weight: 500;
   margin: 0;
+
+  @media only screen and (min-width: 481px!default;) {
+    font-size: 72px;
+  }
 `;
 
 const Employment = styled.div`
@@ -22,14 +26,27 @@ const Employment = styled.div`
 
 const Role = styled.a`
   color: #b58900;
+
+  @media only screen and (min-width: 481px!default;) {
+    display: block;
+  }
 `;
 
 const Company = styled.a`
   color: #cb4b16;
+
+  @media only screen and (min-width: 481px!default;) {
+    display: block;
+  }
 `;
 
 const At = styled.span`
   color: #839496;
+  display: none;
+
+  @media only screen and (min-width: 481px!default;) {
+    display: inline-block;
+  }
 `;
 
 /* Component Logic */

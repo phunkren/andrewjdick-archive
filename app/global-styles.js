@@ -27,10 +27,15 @@ injectGlobal`
 
   p,
   label {
+    font-size: 14px;
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
     margin: 0;
     padding: 0;
+
+    @media only screen and (min-width: 481px!default;) {
+      font-size: 16px;
+    }
   }
 
   canvas {
@@ -42,7 +47,12 @@ injectGlobal`
 
   a {
     color: #ffffff;
+    font-size: 14px;
     text-decoration: none;
     cursor: pointer;
+
+    @media only screen and (min-width: 481px!default;) {
+      font-size: 16px;
+    }
   }
 `;
