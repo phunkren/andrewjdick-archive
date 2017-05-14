@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const Name = styled.h1`
-  font-size: 60px;
+  font-size: 72px;
   font-weight: 500;
   margin: 0;
 `;
@@ -27,7 +27,7 @@ const Role = styled.a`
 
 const Company = styled.a`
   color: #cb4b16;
-  font-weight: 6§00;
+  font-weight: 600;
 `;
 
 const At = styled.span`
