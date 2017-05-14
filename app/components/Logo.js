@@ -22,12 +22,10 @@ const Employment = styled.div`
 
 const Role = styled.a`
   color: #b58900;
-  font-weight: 600;
 `;
 
 const Company = styled.a`
   color: #cb4b16;
-  font-weight: 600;
 `;
 
 const At = styled.span`
