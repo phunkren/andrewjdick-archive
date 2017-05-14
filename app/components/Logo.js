@@ -20,6 +20,20 @@ const Employment = styled.div`
   text-align: center;
 `;
 
+const Role = styled.a`
+  color: #b58900;
+  font-weight: 600;
+`;
+
+const Company = styled.a`
+  color: #cb4b16;
+  font-weight: 6§00;
+`;
+
+const At = styled.span`
+  color: #839496;
+`;
+
 /* Component Logic */
 export default class Logo extends React.PureComponent {
 
@@ -32,7 +46,7 @@ export default class Logo extends React.PureComponent {
       <Wrapper>
         <Name><a href={this.props.personalLink} target="_blank"> {this.props.title}</a></Name>
         <Employment>
-          <a href={this.props.positionLink} target="_blank">{this.props.position}</a> <span>@</span> <a href={this.props.companyLink} target="_blank">{this.props.company}</a>
+          <Role href={this.props.positionLink} target="_blank">{this.props.position}</Role> <At>@</At> <Company href={this.props.companyLink} target="_blank">{this.props.company}</Company>
         </Employment>
       </Wrapper>
     );

@@ -15,19 +15,22 @@ const LatestTweet = styled.section`
 `;
 
 const TweetText = styled.a`
+  color: #eee8d5;
+
   &:hover {
     text-decoration: underline;
   }
 `;
 
 const TweetLink = styled.a`
+  color: #268bd2;
   text-decoration: underline;
   font-weight: 500;
   padding-left: 10px;
 `;
 
 const TweetHandle = styled.p`
-  color: #ffffff;
+  color: #eee8d5;
   text-decoration: none;
 `;
 
