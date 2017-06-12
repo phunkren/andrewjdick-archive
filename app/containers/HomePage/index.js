@@ -22,7 +22,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   render() {
     return (
       <div>
-        <Logo title="andrewjdick" personalLink="https://github.com/AndrewJDick" position="Associate Developer" positionLink="https://www.linkedin.com/in/andrewjdick/" company="Cohaesus" companyLink="http://cohaesus.co.uk" />
+        <Logo title="andrewjdick" personalLink="https://github.com/AndrewJDick" position="Frontend Developer" positionLink="https://www.linkedin.com/in/andrewjdick/" company="Fathom" companyLink="http://fathomlondon.com/" />
 
         <Tweet />
 
